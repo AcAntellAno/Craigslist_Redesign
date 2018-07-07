@@ -1,0 +1,18 @@
+<h1>This is the posts page</h1>
+
+<%posts.forEach((post) => { %>
+    <div>
+        <h2>
+            <%=post.title%>
+        </h2>
+        <h3>
+            <%=post.price%>
+        </h3>
+        <img src="<%=post.image%>" alt="Blog Image">
+        <%=post.body%>
+            <strong>
+                <%=post.location%>
+            </strong>
+            <%=post.date%>
+    </div>
+    <% }) %>
