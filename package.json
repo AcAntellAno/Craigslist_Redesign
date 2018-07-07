@@ -1,0 +1,27 @@
+{
+  "name": "craigslist_redesign",
+  "version": "1.0.0",
+  "description": "Craigslist Redesign both frontend and backend",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AcAntellAno/Craigslist_Redesign.git"
+  },
+  "author": "Anthony Cantellano (AcAntellAno)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AcAntellAno/Craigslist_Redesign/issues"
+  },
+  "homepage": "https://github.com/AcAntellAno/Craigslist_Redesign#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-sanitizer": "^1.0.4",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.2.1"
+  }
+}
