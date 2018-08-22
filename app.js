@@ -4,26 +4,17 @@ var express = require('express'),
   methodOverride = require('method-override'),
   sanitize = require('express-sanitizer'),
   app = express();
-  const PORT = process.env.PORT;
+  //const PORT = process.env.PORT;
+  const PORT = 8080;
   const url = process.env.DATABASEURL || 'mongodb://localhost/craigslist';
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.redirect('/posts');
+  res.render('landing');
 });
 
-//INDEX => Show Posts
-app.get('/posts', (req, res) => {
-  Post.find({}, (err, posts) => {
-    if (err) {
-      console.log(err);
-    } else {
-      res.render('index', { posts: posts });
-    }
-  });
-});
 
 app.listen(PORT, () => {
   console.log('Craigslist server is starting...');
