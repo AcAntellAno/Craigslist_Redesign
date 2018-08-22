@@ -7,6 +7,7 @@ var express = require('express'),
   //const PORT = process.env.PORT;
   const PORT = 8080;
   const url = process.env.DATABASEURL || 'mongodb://localhost/craigslist';
+  mongoose.connect(url);
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
