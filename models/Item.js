@@ -7,11 +7,11 @@ var itemSchema = new mongoose.Schema({
     picture: String,
     catagory: String,
     price: String,
+    location: String,
     date: {
         type: Date,
         default: Date.now
     },
-    location: String,
     author: {
         id: {
             type: mongoose.Schema.Types.ObjectId,
