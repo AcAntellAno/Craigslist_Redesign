@@ -2,10 +2,16 @@ let express = require('express');
 let app = express();
 let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
+let Item = require('./models/Item');
+let seedDB = require('./seeds')
 const PORT = 8080;
+
+var url = process.env.DATABASEURL || 'mongodb://localhost/craigslistDB'
+mongoose.connect(url);
 
 //set default view engine
 app.set('view engine', 'ejs');
+seedDB();
 
 app.get('/', (req, res) => {
     res.redirect('/api/items');
@@ -15,7 +21,16 @@ app.get('/', (req, res) => {
 
 //INDEX
 app.get('/api/items', (req, res) => {
-    res.render('index');
+    Item.find({}, (err, foundItems) => {
+        if (err) {
+            console.log("Could not load items, command returned: " + err);
+        } else {
+            res.render('index', {
+                items: foundItems
+            });
+        }
+    })
+
 });
 
 app.listen(PORT, () => {

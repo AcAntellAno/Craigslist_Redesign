@@ -1,4 +1,33 @@
 <% include partials/header %>
-    <h1>Index route</h1>
+
+    <div class="container">
+        <h1>Index route</h1>
+        <div class="row">
+            <% items.forEach((item) => { %>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="<%=item.image%>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=item.title %>
+                            </h5>
+                            <p class="card-text">
+                                <%=item.description.substring(0, 100)%>...
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    <%=item.date.toDateString()%>
+                                </small>
+                            </p>
+                            <a href="api/item/<%=item._id%>" class="btn btn-primary">View Listing</a>
+                        </div>
+                    </div>
+                </div>
+                <%})%>
+        </div>
+
+    </div>
+
+
 
     <% include partials/footer %>
