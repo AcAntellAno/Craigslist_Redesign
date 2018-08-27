@@ -68,6 +68,11 @@ app.post('/api/items', (req, res) => {
     })
 });
 
+//SHOW 
+app.get('/api/item/:id', (req, res) => {
+    res.send('This is the show page');
+});
+
 
 //server
 app.listen(PORT, () => {
