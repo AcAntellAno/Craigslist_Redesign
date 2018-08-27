@@ -70,7 +70,14 @@ app.post('/api/items', (req, res) => {
 
 //SHOW 
 app.get('/api/item/:id', (req, res) => {
-    res.send('This is the show page');
+    Item.findById(req.params.id, (err, selectedItem) => {
+        if(err){
+            console.log("Could not get item, returned error: " + err);
+        } else{
+            console.log("Details of selected item: " + selectedItem);
+            res.render('show', {items: selectedItem});
+        }
+    })
 });
 
 
