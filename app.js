@@ -33,6 +33,10 @@ app.get('/api/items', (req, res) => {
 
 });
 
+app.get('/api/items/new', (req, res) => {
+    res.render('new');
+});
+
 app.listen(PORT, () => {
     console.log("Server is on " + PORT);
 });

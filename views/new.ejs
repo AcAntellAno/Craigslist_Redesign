@@ -1,0 +1,36 @@
+<% include partials/header %>
+
+    <div class="container">
+        <h2>What are you selling?</h2>
+        <form action="https://www.google.com" method="GET">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" aria-describedby="titleHelp" placeholder="My awesome title" name="title">
+                <small id="titleHelp" class="form-text text-muted">Make a clear title.</small>
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="text" class="form-control" id="image" placeholder="My awesome picture" name="image">
+            </div>
+            <div class="form-group">
+                <label for="body">Description</label>
+                <textarea class="form-control" id="body" rows="3" name="description"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="price">Price</label>
+                        <input type="text" class="form-control" placeholder="$123" name="price">
+                    </div>
+                    <div class="col">
+                        <label for="location">Location</label>
+                        <input type="text" class="form-control" placeholder="Turlock, CA" name="location">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <% include partials/footer %>

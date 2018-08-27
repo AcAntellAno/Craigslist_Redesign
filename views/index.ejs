@@ -1,7 +1,8 @@
 <% include partials/header %>
 
     <div class="container">
-        <h1>Index route</h1>
+        <h1>
+            Items For Sale</h1>
         <div class="row">
             <% items.forEach((item) => { %>
                 <div class="col-md-4 col-sm-6 col-xs-12">
@@ -19,7 +20,7 @@
                                     <%=item.date.toDateString()%>
                                 </small>
                             </p>
-                            <a href="api/item/<%=item._id%>" class="btn btn-primary">View Listing</a>
+                            <a href="item/<%=item._id%>" class="btn btn-primary">View Listing</a>
                         </div>
                     </div>
                 </div>
