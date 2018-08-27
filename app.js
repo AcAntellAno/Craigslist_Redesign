@@ -12,6 +12,9 @@ mongoose.connect(url);
 //set default view engine
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 seedDB();
 
 app.get('/', (req, res) => {
@@ -34,10 +37,39 @@ app.get('/api/items', (req, res) => {
 
 });
 
+//NEW
 app.get('/api/items/new', (req, res) => {
     res.render('new');
 });
 
+//CREATE
+app.post('/api/items', (req, res) => {
+    //console.log(req.body);
+    var title = req.body.title;
+    var image = req.body.image;
+    var description = req.body.description;
+    var price = req.body.price;
+    var location = req.body.location;
+    var newItem = {
+        title: title,
+        image: image,
+        description: description,
+        price: price,
+        location: location
+    };
+    //create new item and save to db
+    Item.create(newItem, (err, Item) => {
+        if (err) {
+            console.log("New item could not be added, returned with error: " + err);
+        } else {
+            console.log(Item);
+            res.redirect('/api/items');
+        }
+    })
+});
+
+
+//server
 app.listen(PORT, () => {
     console.log("Server is on " + PORT);
 });
