@@ -23,7 +23,7 @@ This will be a complete UI rehaul, including the TECHStack. So, currently Craigs
 I will try my best to follow REST
 
 # TODOS:
-          1. -[x] Install packages
+          1. - [x] Install packages
               1. -[x] Set up require statements
           2. -[x] Create dev server
           3. Create mongodb schema
