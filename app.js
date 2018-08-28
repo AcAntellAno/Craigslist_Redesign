@@ -70,19 +70,9 @@ app.post('/api/v1/items', (req, res) => {
 
 
 //SHOW
-// app.get('/api/v1/items/:id', (req, res) => {
-//     Item.findById(req.params.id, (err, selectedItem) => {
-//         if (err) {
-//             console.log(err)
-//         } else {
-//             console.log(req.params.id);
-
-//             res.render('show', {
-//                 items: selectedItem
-//             });
-//         }
-//     });
-// });
+app.get('/api/v1/items/:id', (req, res) => {
+    res.send('Hit the buggy show route');
+});
 
 //server
 app.listen(PORT, () => {
