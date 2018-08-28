@@ -30,7 +30,3 @@ I will try my best to follow REST
 -Landing Page
 -Other Pages
 -WILL UPDATE AS I GO...I suppose
-
-# Update:
-I created a webserver and made index route. I also added mongoose.
-I want to add a new feature to craigslist...I want to integrate a chat feture so that way sellers and buyers can communicate via the app. There will be no need to exchange numbers/contact information. 
