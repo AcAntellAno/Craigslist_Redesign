@@ -23,13 +23,16 @@ This will be a complete UI rehaul, including the TECHStack. So, currently Craigs
 I will try my best to follow REST
 
 # TODOS:
--Set up my require variables
--Create web server
--Create DB Schema
--Create routes
--Landing Page
--Other Pages
--WILL UPDATE AS I GO...I suppose
+          1. [x]Install packages
+              1. [x]Set up require statements
+          2. [x]Create dev server
+          3. Create mongodb schema
+              1. [x]User schema
+              2. Likes schema
+              3. Item schema
+          4. Create RESTful API/Routes
+          5. Style landing pages
+          6. More to come...
 
 # To Run Application
           1. Git clone this repo
