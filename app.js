@@ -18,13 +18,13 @@ app.use(bodyParser.urlencoded({
 seedDB();
 
 app.get('/', (req, res) => {
-    res.redirect('/api/items');
+    res.redirect('/api/v1/items');
 });
 
 //RESTful Routes for Items
 
 //INDEX
-app.get('/api/items', (req, res) => {
+app.get('/api/v1/items', (req, res) => {
     Item.find({}, (err, foundItems) => {
         if (err) {
             console.log("Could not load items, command returned: " + err);
@@ -38,12 +38,12 @@ app.get('/api/items', (req, res) => {
 });
 
 //NEW
-app.get('/api/items/new', (req, res) => {
+app.get('/api/v1/items/new', (req, res) => {
     res.render('new');
 });
 
 //CREATE
-app.post('/api/items', (req, res) => {
+app.post('/api/v1/items', (req, res) => {
     //console.log(req.body);
     var title = req.body.title;
     var image = req.body.image;
@@ -63,23 +63,26 @@ app.post('/api/items', (req, res) => {
             console.log("New item could not be added, returned with error: " + err);
         } else {
             console.log(Item);
-            res.redirect('/api/items');
+            res.redirect('/api/v1/items');
         }
     })
 });
 
-//SHOW 
-app.get('/api/item/:id', (req, res) => {
-    Item.findById(req.params.id, (err, selectedItem) => {
-        if(err){
-            console.log("Could not get item, returned error: " + err);
-        } else{
-            console.log("Details of selected item: " + selectedItem);
-            res.render('show', {items: selectedItem});
-        }
-    })
-});
 
+//SHOW
+// app.get('/api/v1/items/:id', (req, res) => {
+//     Item.findById(req.params.id, (err, selectedItem) => {
+//         if (err) {
+//             console.log(err)
+//         } else {
+//             console.log(req.params.id);
+
+//             res.render('show', {
+//                 items: selectedItem
+//             });
+//         }
+//     });
+// });
 
 //server
 app.listen(PORT, () => {
