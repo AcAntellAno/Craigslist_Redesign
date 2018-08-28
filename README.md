@@ -30,3 +30,8 @@ I will try my best to follow REST
 -Landing Page
 -Other Pages
 -WILL UPDATE AS I GO...I suppose
+
+# To Run Application
+          1. Git clone this repo
+          2. Run `npm init`
+          3. Run `npm start`
