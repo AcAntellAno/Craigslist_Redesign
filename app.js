@@ -71,7 +71,7 @@ app.post('/api/v1/items', (req, res) => {
 
 //SHOW
 app.get('/api/v1/items/:id', (req, res) => {
-    res.send('Hit the buggy show route');
+    res.render('show');
 });
 
 //server
