@@ -74,8 +74,11 @@ function seedDB() {
                 } else {
                     console.log("Added item...");
                 }
+
             })
         })
+
     })
 }
+console.log("Finished loading data...")
 module.exports = seedDB;

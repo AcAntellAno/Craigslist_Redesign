@@ -30,7 +30,7 @@ app.get('/api/v1/items', (req, res) => {
             console.log("Could not load items, command returned: " + err);
         } else {
             res.render('index', {
-                items: foundItems
+                foundItems: foundItems
             });
         }
     })
@@ -71,7 +71,18 @@ app.post('/api/v1/items', (req, res) => {
 
 //SHOW
 app.get('/api/v1/items/:id', (req, res) => {
-    res.render('show');
+    var data = req.params.id;
+    Item.findById(data, (err, selectedItem) => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(req.params.id);
+            res.render('show', {
+                items: selectedItem
+            });
+        }
+    });
+
 });
 
 //server
