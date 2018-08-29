@@ -80,5 +80,4 @@ function seedDB() {
 
     })
 }
-console.log("Finished loading data...")
 module.exports = seedDB;
