@@ -1,6 +1,36 @@
 <% include partials/header %>
-    <h1>Show Route</h1>
-
-    <img src="<%=items.image%>" alt="Item">
+    <!-- <div class="container"> -->
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">Doug's List</p>
+            <div class="list-group">
+                <li class="list-group-item active">Info 1</li>
+                <li class="list-group-item">Info 1</li>
+                <li class="list-group-item">Info 1</li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <img class="img-responsive" src="<%=items.image%>" alt="Item">
+                <div class="caption-full">
+                    <h4 class="pull-right">
+                        $
+                        <%=items.price%>
+                    </h4>
+                    <h3>
+                        <a href="#">
+                            <%= items.name %>
+                        </a>
+                    </h3>
+                    <h4>
+                        <p>
+                            <%=items.description%>
+                        </p>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
 
     <% include partials/footer %>
