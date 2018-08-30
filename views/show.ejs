@@ -1,35 +1,39 @@
 <% include partials/header %>
-    <div class="container">
+    <div class="container" style="padding-top: 40px;">
         <div class="row">
-            <div class="col-md-3">
-                <p class="lead">Doug's List</p>
-                <div class="list-group">
-                    <li class="list-group-item active">Technology</li>
-                    <li class="list-group-item">Gaming</li>
-                    <li class="list-group-item">For Sale</li>
-                </div>
-            </div>
-            <div class="col-md-9">
+            <div class="col-md-7">
                 <div class="thumbnail">
-                    <img class="img-fluid" src="<%=items.image%>" alt="Item">
-                    <div class="caption-full">
-                        <h4 class="pull-right">
-                            $
-                            <%=items.price%>
-                        </h4>
-                        <h3>
-                            <a href="#">
-                                <%= items.name %>
-                            </a>
-                        </h3>
-                        <h4>
-                            <p>
-                                <%=items.description%>
-                            </p>
-                        </h4>
-                    </div>
+                    <img class="img-fluid box-border-img" src="<%=items.image%>" alt="Item">
+                    <span class="badge badge-pill badge-gaming">Gaming</span>
+                    <span class="badge badge-pill badge-technology">Technology</span>
+                    <span class="badge badge-pill badge-forSale">For Sale</span>
                 </div>
             </div>
+            <div class="col-md-5">
+                <p class="lead">Doug's List</p>
+                <div class="caption-full">
+
+                    <h3 class="box-border" style="text-align: center;">
+                        <a href="#">
+                            <%= items.title %>
+                        </a>
+
+                    </h3>
+                    <h4>
+                        <p class="box-border">
+                            <%=items.description%>
+                        </p>
+                    </h4>
+                    <h4 class="box-border float-left">
+                        $
+                        <%=items.price%>
+                    </h4>
+                    <button type="button" class="btn btn-small btn-teal float-right">
+                        Contact
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 

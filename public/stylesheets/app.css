@@ -7,3 +7,54 @@ body {
 a.nav-link {
     margin-right: 20px;
 }
+
+.box-border {
+    border: 2px solid #DD7373;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.box-border-img {
+    border: 2px solid #DD7373;
+    border-radius: 15px;
+}
+
+.btn-teal {
+    background-color: #59C9A5;
+    border-color: #59C9A5;
+}
+
+.btn-teal:hover {
+    background-color: rgb(20, 179, 128);
+    border-color: rgb(20, 179, 128);
+    color: white;
+    transition: box-shadow 0.45s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.badge-gaming {
+    background-color: rgb(20, 179, 128);
+    color: white;
+    transition: box-shadow 0.45s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    margin: 10px;
+}
+
+.badge-technology {
+    background-color: rgb(0, 110, 144);
+    color: white;
+    transition: box-shadow 0.45s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    margin: 10px;
+}
+
+.badge-forSale {
+    background-color: rgb(132, 220, 207);
+    color: white;
+    transition: box-shadow 0.45s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    margin: 10px;
+}
