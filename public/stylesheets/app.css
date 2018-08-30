@@ -19,6 +19,19 @@ a.nav-link {
     margin-right: 20px;
 }
 
+.fa-heart {
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa-heart:hover {
+    color: #D81E5B;
+}
+
+.fa-heart {
+    color: #D81E5B;
+}
+
 .box-border {
     border: 2px solid #DD7373;
     border-radius: 15px;

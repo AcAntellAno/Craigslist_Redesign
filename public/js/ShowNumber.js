@@ -6,3 +6,8 @@ var showNumber = () => {
         num.style.display = "none";
     }
 }
+
+//not going to create new js file for 3 lines of code :p
+var toggleHeart = (tog) => {
+    tog.classList.toggle('fas', 'fa-heart');
+}
