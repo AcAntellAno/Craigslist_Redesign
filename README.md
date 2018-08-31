@@ -33,6 +33,9 @@ I will try my best to follow REST
           4. -[] Create RESTful API/Routes
           5. -[] Style landing pages
           6. -[] More to come...
+          7. - [X] Add testing framework
+               1. - [] mocha config
+               2. - [] chai config
 
 # To Run Application
           1. Git clone this repo
