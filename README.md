@@ -39,5 +39,5 @@ I will try my best to follow REST
 
 # To Run Application
           1. Git clone this repo
-          2. Run `npm init`
+          2. Run `npm install`
           3. Run `npm start`
