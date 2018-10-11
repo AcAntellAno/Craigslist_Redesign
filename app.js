@@ -1,9 +1,9 @@
-let express = require('express');
-let app = express();
-let bodyParser = require('body-parser');
-let mongoose = require('mongoose');
-let Item = require('./models/Item');
-let seedDB = require('./seeds')
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var Item = require('./models/Item');
+var seedDB = require('./seeds')
 const PORT = 8080;
 
 var url = process.env.DATABASEURL || 'mongodb://localhost/craigslistDB'
